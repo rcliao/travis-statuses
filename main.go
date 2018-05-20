@@ -30,7 +30,7 @@ func main() {
 	repoNames := readRepoNamesFile(*repoNamesFile)
 	for _, repoName := range repoNames {
 		fmt.Printf(
-			"Latest state of %s: %s\n",
+			"Latest build %41s: %s\n",
 			repoName,
 			getLatestBuildState(client, *token, *orgName, repoName),
 		)
